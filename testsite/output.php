@@ -1,11 +1,5 @@
 <?php
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$password = $_POST["password"];
-
-if ($name && $email && $password){
-
     //create a db connection
     $link = mysqli_connect("localhost", "root", "");
     if(!$link){
@@ -28,18 +22,7 @@ if ($name && $email && $password){
     // step 2: perform query
     $result = mysqli_query($link, $query1);
 
-    $registered = mysqli_affected_rows($link);
 
-    echo "$registered user was successfully added";
-
-
-}else{
-
-    echo "You have to complete the form";
-
-}
-
-mysql_close();
 
 
 ?>
